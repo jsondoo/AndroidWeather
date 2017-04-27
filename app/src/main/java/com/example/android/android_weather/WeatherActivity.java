@@ -9,9 +9,14 @@ import android.widget.TextView;
 
 public class WeatherActivity extends AppCompatActivity {
     private OpenWeatherMap openWeatherMap;
-    private TextView textView;
-    private TextView textView2;
-    private TextView textView3;
+
+
+    private TextView weatherInfoTextView;
+    private TextView temperatureTextView;
+    private TextView humidityTextView;
+    private TextView pressureTextView;
+    private TextView weatherdescTextView;
+    private TextView windspeedTextView;
 
     private ActionBar supportActionBar;
 
@@ -20,9 +25,12 @@ public class WeatherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
 
-        textView = (TextView) findViewById(R.id.text_view);
-        textView2 = (TextView) findViewById(R.id.text_view2);
-        textView3 = (TextView) findViewById(R.id.text_view3);
+        temperatureTextView = (TextView) findViewById(R.id.temperature_textview);
+        humidityTextView = (TextView) findViewById(R.id.humidity_textview);
+        weatherdescTextView = (TextView) findViewById(R.id.weatherdesc_textview);
+        weatherInfoTextView = (TextView) findViewById(R.id.weather_info);
+        windspeedTextView = (TextView) findViewById(R.id.windspeed_textview);
+        pressureTextView = (TextView) findViewById(R.id.pressure_textview);
 
         supportActionBar = getSupportActionBar();
         supportActionBar.setHomeButtonEnabled(true);
@@ -56,12 +64,14 @@ public class WeatherActivity extends AppCompatActivity {
         protected void onPostExecute(Boolean success) {
             if(success) {
                 supportActionBar.setTitle("Weather for " + openWeatherMap.getCityName());
-                textView.setText(openWeatherMap.getTempCelsius() + "C");
-                textView2.setText(openWeatherMap.getHumidity() + "%");
-                textView3.setText(openWeatherMap.getWeatherDesc());
+                temperatureTextView.setText("Temperature: " + openWeatherMap.getTempCelsius() + "°C");
+                humidityTextView.setText("Humidity: " + openWeatherMap.getHumidity() + "%");
+                weatherdescTextView.setText("Weather: " + openWeatherMap.getWeatherDesc());
+                windspeedTextView.setText("Wind Speed: " + openWeatherMap.getWindSpeed() + " m/s");
+                pressureTextView.setText("Pressure: " + openWeatherMap.getPressure() + " kPa");
             }
             else{
-                textView.setText("Something went wrong");
+                weatherInfoTextView.setText("Oops... Something went wrong :(");
             }
         }
     }

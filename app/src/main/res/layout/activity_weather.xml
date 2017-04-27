@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,24 +7,70 @@
     tools:context="com.example.android.android_weather.WeatherActivity">
 
     <TextView
-        android:id="@+id/text_view"
+        android:id="@+id/weather_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:padding="15dp"
+        android:textAlignment="center"
+        android:text="Here is the current weather! (powered by OpenWeatherMap API)"/>
+
+    <TextView
+        android:id="@+id/temperature_textview"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/weather_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="20sp"
         android:text="@string/loading"
         />
 
     <TextView
-        android:id="@+id/text_view2"
+        android:id="@+id/humidity_textview"
+        android:layout_below="@id/temperature_textview"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="20sp"
         android:text="@string/loading"
         />
 
     <TextView
-        android:id="@+id/text_view3"
+        android:id="@+id/pressure_textview"
+        android:layout_below="@id/humidity_textview"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="20sp"
         android:text="@string/loading"
         />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/weatherdesc_textview"
+        android:layout_below="@id/pressure_textview"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:text="@string/loading"
+        />
+
+    <TextView
+        android:id="@+id/windspeed_textview"
+        android:layout_below="@id/weatherdesc_textview"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:text="@string/loading"
+        />
+
+
+
+</RelativeLayout>

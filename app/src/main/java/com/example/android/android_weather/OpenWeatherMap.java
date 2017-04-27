@@ -11,7 +11,7 @@ import java.net.URL;
 
 // Class for handling API requests, and parsing JSON data
 public class OpenWeatherMap {
-    private static final String API_KEY = "";
+    private static final String API_KEY = Config.API_KEY;
     private static final String BASE_URL = "http://api.openweathermap.org/data/2.5/weather?";
 
     private String lat;

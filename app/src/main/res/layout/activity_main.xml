@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -7,10 +7,48 @@
     android:orientation="vertical"
     tools:context="com.example.android.android_weather.MainActivity">
 
+    <TextView
+        android:id="@+id/preset_text"
+        android:text="Preset Locations"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/Houston_Weather_Button"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/preset_text"
+
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Houston, Texas"/>
+
+    <Button
+        android:id="@+id/Seattle_Weather_Button"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Houston_Weather_Button"
+        android:text="Seattle, WA"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/UBC_Weather_Button"
-        android:layout_width="wrap_content"
+        android:layout_below="@id/Seattle_Weather_Button"
+        android:layout_centerHorizontal="true"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:text="UBC, Vancouver"/>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/New_York_Weather_Button"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/UBC_Weather_Button"
+        android:text="New York, NY"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
