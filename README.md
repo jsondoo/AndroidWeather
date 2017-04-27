@@ -4,3 +4,7 @@ Create an app that has one button. When the button is pressed, the current tempe
 
 # Your comments or assumptions
 Used OpenWeatherMap API and added more locations for fun
+
+<img src="http://imgur.com/fcFHQvW.jpg" height="500px"/>
+<img src="http://imgur.com/lBltUVp.jpg" height="500px"/>
+<img src="http://imgur.com/tZ5LF7C.jpg" height="500px"/>
